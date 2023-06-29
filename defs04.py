@@ -34,20 +34,21 @@ def media(L):
     return valorMedio
 
 
-def gerarlista(L1,L3):
+def gerarlista(L1,L2,L3):
     L3.append(int(L1[0]))
-    n=(int(0))
     for i in range(len(L1)):
+        n = True
         for j in range(len(L3)):
             if L1[i] == L3[j]:
-                n=1
-            else:
-                pass
-       if n == 1:
-           L3.append(int(L1[i]))
-    """for i in range(len(L2)):
+                n = False
+        if n:
+            L3.append(int(L1[i]))
+    for i in range(len(L2)):
+        n = True
         for j in range(len(L3)):
-            if L2[i] != L3[j]:
-                L3.append(int(L2[i]))"""
+            if L2[i] == L3[j]:
+                n = False
+        if n:
+            L3.append(int(L2[i]))
     return L3
 

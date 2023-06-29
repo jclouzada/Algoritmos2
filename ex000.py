@@ -1,6 +1,8 @@
-def fatorial(n):
-    if n == 0 or n == 1:
-        return 1
-    else:
-        return n * fatorial(n - 1)
-print(f"{fatorial(5)}")
+import sys
+print(f"Número de parâmetros: {len(sys.argv)}")
+for n, p in enumerate(sys.argv):
+    print(f"Parâmetro {n} = {p}")
+
+with open("numeros.txt", "r") as arquivo:
+    for linha in arquivo. readlines ():
+        print(linha)
